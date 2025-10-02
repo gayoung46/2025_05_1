@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     printf("Input an integer: \n");
     scanf("%d", &number);
     
-    if(number>0)
+    if(number<0)
     {
                 number = -number;
     }
