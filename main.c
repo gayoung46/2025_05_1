@@ -3,17 +3,18 @@
 
 int main(int argc, char *argv[])
 {
-    int number;
-    printf("Input an integer: \n");
-    scanf("%d", &number);
+    int x;
+    int i;
+    int sum=0;
     
-    if(number<0)
-    {
-                number = -number;
-    }
+    printf("Input an integer : ");
+    scanf("%d", &x);
     
-    printf("절대값은 %d 입니다.\n", number); 
-  
+    for(i=1;i<=x;i++)
+               sum = sum + i; 
+    
+    printf("sum is %i\n", sum);
+     
   system("PAUSE");	
   return 0;
 }
