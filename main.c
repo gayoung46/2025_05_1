@@ -3,26 +3,16 @@
 
 int main(int argc, char *argv[])
 {
-    int i;
+    int number;
+    printf("Input an integer: \n");
+    scanf("%d", &number);
     
-    printf("Input an integer: "); 
-    scanf("%d", &i);
-    
-    if(i>0)
+    if(number>0)
     {
-           printf("양수입니다.\n");
+                number = -number;
     }
     
-    else if(i<0) 
-    {
-         printf("음수입니다.\n");
-    }
-    
-    else
-    {
-        printf("0입니다.\n");
-    } 
-     
+    printf("절대값은 %d 입니다.\n", number); 
   
   system("PAUSE");	
   return 0;
