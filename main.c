@@ -3,30 +3,38 @@
 
 int main(int argc, char *argv[])
 {
-    int a, b;
-    char op;
-    int result;
+    int answer = 59;
+    int trial = 0;
+    int num;
     
-    printf("Enter the calculation : ");
-    scanf("%i %c %i", &a, &op, &b);
-    
-    switch(op)
+    do
     {
-              case '+':
-                   result = a+b;
-                   break;
-              
-              case '-':
-                   result = a-b;
-                   break;
-                   
-              default:
-                   printf("지원하지 않는 연산자입니다.\n"); 
-                   break; 
-                   
+         printf("Guess a number : ");
+         scanf("%d", &num);
+         
+         if(num>answer)
+         {
+                       printf("high!\n");
+         }
+         
+         else if(num<answer)
+         {
+                       printf("low!\n");
+         }
+         
+         //else
+         //{
+             //printf("congratulation! trials : %d\n",trial+1);
+         //}
+         
+         trial = trial + 1;
+         
     }
     
-    printf(" = %i", result);
+    while(num != answer); 
+    
+   
+   printf("congratulation! trials : %d\n",trial);
     
      
   system("PAUSE");	
